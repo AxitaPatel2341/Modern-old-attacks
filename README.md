@@ -91,8 +91,8 @@ db.query("SELECT * FROM users WHERE id = ?", [id])
 Unsafe:
 db.query("SELECT * FROM users WHERE id = " + id)
 ```
-👉 Vulnerability is NOT GraphQL itself
-👉 It’s in the resolver → SQL connection
+- Vulnerability is NOT GraphQL itself
+- It’s in the resolver → SQL connection
 
 **🧩 Mental Model**:
 ```
@@ -103,4 +103,4 @@ SQL = Data Vault
 If router passes bad input → vault gets compromised
 ```
 
-👉 “GraphQL finds everything, SQL leaks everything — if the resolver is weak.”
+- “GraphQL finds everything, SQL leaks everything — if the resolver is weak.”
